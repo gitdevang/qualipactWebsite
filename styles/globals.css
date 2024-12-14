@@ -1,0 +1,419 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: "Poppins Light";
+  font-style: normal;
+  font-display: swap;
+  src: url(/fonts/Poppins-Light.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Poppins Regular";
+  font-style: normal;
+  font-display: swap;
+  src: url(/fonts/Poppins-Regular.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Poppins Medium";
+  font-style: normal;
+  font-display: swap;
+  src: url(/fonts/Poppins-Medium.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Poppins Semibold";
+  font-style: normal;
+  font-display: swap;
+  src: url(/fonts/Poppins-SemiBold.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Poppins Bold";
+  font-style: normal;
+  font-display: swap;
+  src: url(/fonts/Poppins-Bold.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Poppins Extrabold";
+  font-style: normal;
+  font-display: swap;
+  src: url(/fonts/Poppins-ExtraBold.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Poppins Black";
+  font-style: normal;
+  font-display: swap;
+  src: url(/fonts/Poppins-Black.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Mulish";
+  font-style: normal;
+  font-display: swap;
+  src: url(/fonts/Mulish-VariableFont_wght.woff2) format("woff2");
+}
+.techStackCard {
+  width: 8rem;
+}
+
+.industrycard::after {
+  content: "";
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(199, 199, 199, 0.103), transparent);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  z-index: -1;
+}
+.industrycard.active::after {
+  opacity: 1;
+}
+
+.torch {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgb(86, 98, 211), transparent);
+  pointer-events: none;
+  mix-blend-mode: screen;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(50px);
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+#torchactive:hover .torch {
+  opacity: 0.8;
+}
+
+.radial-bg {
+  background: rgb(118, 108, 126);
+  background: radial-gradient(
+    circle at bottom,
+    rgba(165, 172, 213, 0.819) 0%,
+    #020024 50%
+  );
+}
+
+.animate-scale-fade {
+  animation: animate-scale-fade 0.7s ease-in-out forwards;
+}
+
+@keyframes animate-scale-fade {
+  0% {
+    opacity: 0;
+    transform: scale(0.75) translateY(70px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0px);
+  }
+}
+
+.animate-scale {
+  animation: animate-scale 0.7s ease-in-out forwards;
+}
+
+@keyframes animate-scale {
+  0% {
+    opacity: 0;
+    transform: translateY(60px) translateX(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) translateX(-50%);
+  }
+}
+
+
+/* calc(0.2s * n) */
+.contact-fade1 {
+  animation: fade 0.6s ease-in-out forwards;
+}
+
+.contact-scale1 {
+  animation: scale 0.5s ease-in-out forwards;
+  animation-delay: calc(0.2s * 1);
+}
+
+.contact-right1 {
+  animation: animright 0.5s ease-in-out forwards;
+  animation-delay: calc(0.2s * 2);
+}
+
+#divgray1 {
+  animation: increase 0.5s ease-in-out forwards;
+  animation-delay: calc(0.2s * 3);
+}
+
+.contact-fade2 {
+  animation: fade 0.6s ease-in-out forwards;
+  animation-delay: calc(0.2s * 4);
+}
+
+.contact-scale2 {
+  animation: scale 0.5s ease-in-out forwards;
+  animation-delay: calc(0.2s * 5);
+}
+
+.contact-right2 {
+  animation: animright 0.5s ease-in-out forwards;
+  animation-delay: calc(0.2s * 6);
+}
+
+#divgray2 {
+  animation: increase 0.5s ease-in-out forwards;
+  animation-delay: calc(0.2s * 7);
+}
+
+.contact-fade3 {
+  animation: fade 0.6s ease-in-out forwards;
+  animation-delay: calc(0.2s * 8);
+}
+
+.contact-scale3 {
+  animation: scale 0.5s ease-in-out forwards;
+  animation-delay: calc(0.2s * 9);
+}
+
+.contact-right3 {
+  animation: animright 0.5s ease-in-out forwards;
+  animation-delay: calc(0.2s * 10);
+}
+
+#divgray3 {
+  animation: increase 0.5s ease-in-out forwards;
+  animation-delay: calc(0.2s * 11);
+}
+
+.contact-fade4 {
+  animation: fade 0.6s ease-in-out forwards;
+  animation-delay: calc(0.2s * 12);
+}
+
+.contact-scale4 {
+  animation: scale 0.5s ease-in-out forwards;
+  animation-delay: calc(0.2s * 13);
+}
+
+.contact-right4 {
+  animation: animright 0.5s ease-in-out forwards;
+  animation-delay: calc(0.2s * 14);
+}
+
+#divgray4 {
+  animation: increase 0.5s ease-in-out forwards;
+  animation-delay: calc(0.2s * 15);
+}
+
+.contact-fade5 {
+  animation: fade 0.6s ease-in-out forwards;
+  animation-delay: calc(0.2s * 16);
+}
+
+.contact-scale5 {
+  animation: scale 0.5s ease-in-out forwards;
+  animation-delay: calc(0.2s * 17);
+}
+
+.contact-right5 {
+  animation: animright 0.5s ease-in-out forwards;
+  animation-delay: calc(0.2s * 18);
+}
+
+#divgray5 {
+  animation: increase 0.5s ease-in-out forwards;
+  animation-delay: calc(0.2s * 19);
+}
+
+.contact-fade6 {
+  animation: fade 0.6s ease-in-out forwards;
+  animation-delay: calc(0.2s * 20);
+}
+
+.contact-scale6 {
+  animation: scale 0.5s ease-in-out forwards;
+  animation-delay: calc(0.2s * 21);
+}
+
+.contact-right6 {
+  animation: animright 0.5s ease-in-out forwards;
+  animation-delay: calc(0.2s * 22);
+}
+
+#divgray6 {
+  animation: increase 0.5s ease-in-out forwards;
+  animation-delay: calc(0.2s * 23);
+}
+
+.contact-fade7 {
+  animation: fade 0.6s ease-in-out forwards;
+  animation-delay: calc(0.2s * 24);
+}
+
+.contact-scale7 {
+  animation: scale 0.5s ease-in-out forwards;
+  animation-delay: calc(0.2s * 25);
+}
+
+.contact-right7 {
+  animation: animright 0.5s ease-in-out forwards;
+  animation-delay: calc(0.2s * 26);
+}
+
+#divgray7 {
+  animation: increase 0.5s ease-in-out forwards;
+  animation-delay: calc(0.2s * 27);
+}
+
+.contact-fade8 {
+  animation: fade 0.6s ease-in-out forwards;
+  animation-delay: calc(0.2s * 28);
+}
+
+.contact-scale8 {
+  animation: scale 0.5s ease-in-out forwards;
+  animation-delay: calc(0.2s * 29);
+}
+
+.contact-right8 {
+  animation: animright 0.5s ease-in-out forwards;
+  animation-delay: calc(0.2s * 30);
+}
+
+#divgray8 {
+  animation: increase 0.5s ease-in-out forwards;
+  animation-delay: calc(0.2s * 31);
+}
+
+@keyframes scale {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes animright {
+  0% {
+    opacity: 0; /* अस्पष्टता 0 (छिपा हुआ) */
+    transform: translateX(-30px); /* दायें 30 पिक्सल पर स्थानांतरित */
+  }
+  100% {
+    opacity: 1; /* अस्पष्टता 1 (दिखाई देना) */
+    transform: translateX(0); /* दायें 0 पिक्सल पर स्थानांतरित */
+  }
+}
+
+
+@keyframes increase {
+  0% {
+    transform-origin: top;
+    transform: scaleY(0);
+  }
+  100% {
+    transform-origin: top;
+    transform: scaleY(1);
+  }
+}
+
+.contact-order {
+  background: -webkit-linear-gradient(45deg, rgb(234 179 8), #f97316, #ef4444);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* Glow effect for buttons */
+.glow-button {
+  box-shadow: 0 0 5px rgba(25, 124, 208, 0.6), 0 0 20px rgba(25, 124, 208, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.glow-button:hover {
+  box-shadow: 0 0 20px rgba(25, 124, 208, 0.8), 0 0 40px rgba(25, 124, 208, 0.5);
+}
+
+.flex-row-center{
+  display: flex  !important;
+  justify-content: center  !important;
+  align-items: center  !important;
+}
+@media (min-width:470px) {
+.service-hero-section{
+  height: 80vh  !important;
+}  
+}
+
+@media (min-width:640px) {
+  .service-hero-section{
+    height: 90vh  !important;
+  }  
+  }
+
+@media (min-width:1800px) {
+  .service-hero-section{
+    height: 80vh  !important;
+  }  
+  }
+  /* Ensure pagination dots are visible by default */
+.swiper-pagination {
+  display: flex;
+  /* Ensure pagination is rendered */
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0px;
+  margin-top: 10px;
+  visibility: visible;
+  /* Make sure it's not hidden */
+}
+
+/* Style the pagination bullets */
+.swiper-pagination-bullet {
+  background-color: #ffffff;
+  /* Color of the dots */
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Style the active pagination bullet */
+.swiper-pagination-bullet-active {
+  background-color: #197cd0;
+  /* Color of the active bullet */
+}
+
+@media (min-width:1800px) {
+  .home-hero-section{
+    height: 80vh  !important;
+  }  
+  }
+
+  .fixedSizeofTechs{
+    width: 64px !important;
+    height: 64px !important;
+  }

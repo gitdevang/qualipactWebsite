@@ -1,0 +1,185 @@
+.articleofhome {
+  --m: calc(0.5 * (var(--i)));
+  --abs: Max(calc(var(--i) - var(--m)), calc(var(--m) - var(--i)));
+  --val: calc(var(--abs) * (1 + 0.5 * var(--i)) / var(--n));
+  --dt0: calc(var(--val) * 1s);
+  --dt1: calc((var(--val) + 0.3) * 1s);
+  --dt2: calc((var(--val) + 0.6) * 1s);
+  --dt3: calc((var(--val) + 0.9) * 1s);
+  --dt4: calc((var(--val) + 1.3) * 1s);
+  --dt5: calc((var(--val) + 1.6) * 1s);
+  --dt6: calc((var(--val) + 1.9) * 1s);
+  overflow: hidden;
+  backface-visibility: hidden;
+  transform: perspective(25em);
+  border-radius: 50px;
+  background: #4b2390 content-box;
+  animation: card 1s ease-out var(--dt0) backwards;
+}
+.articleofhome:nth-child(1){
+  animation: myfirst 4s infinite;
+  transform: translateX(0px) translateY(0px);
+}
+.articleofhome:nth-child(2){
+  animation: myfirst 6s infinite;
+  transform: translateX(0px) translateY(0px);
+}
+.articleofhome:nth-child(3){
+  animation: myfirst 3s infinite;
+  transform: translateX(0px) translateY(0px);
+}
+.articleofhome:nth-child(4){
+  animation: myfirst 4s infinite;
+  transform: translateX(0px) translateY(0px); 
+}
+
+@keyframes myfirst {
+  0%   {transform: translateX(0px) translateY(0px);}
+ 50%  {transform: translateX(0px) translateY(20px);}
+  100% {transform: translateX(0px) translateY(0px);}
+}
+.articleofhome ::before,
+.articleofhome ::after,
+.articleofhome button {
+  --j: 1;
+  --sgn-j: calc(2 * var(--j) - 1);
+  --not-j: calc(1 - var(--j));
+  --mask: linear-gradient(
+      calc(var(--sgn-j) * 90deg),
+      red 33.333%,
+      transparent 66.667%
+    )
+    calc(var(--not-j) * 100%) / 300%;
+}
+
+@keyframes card {
+  0% {
+    transform: perspective(25em) rotatey(0.5turn);
+  }
+}
+.header {
+  grid-gap: 1rem;
+  position: relative;
+  padding: 2rem 0.5em 1rem;
+  transform-origin: 100% 100%;
+  background: #18092e;
+  color: #fff;
+  animation: head 1s ease-out var(--dt1) backwards;
+}
+
+.bgminblue{
+ background: linear-gradient(var(--deg),#4b2390,transparent 50%);
+ filter: blur(15px);
+}
+
+.animate-increase {
+  animation: ring 1s ease-out var(--dt3) forwards;
+}
+.animate-line {
+  animation: line 1s ease-out var(--dt5) forwards;
+}
+.animate-para {
+  animation: para 2s ease-out var(--dt6) forwards;
+}
+@keyframes head {
+  0% {
+    transform: translate(-100%) skewx(35deg);
+  }
+}
+@keyframes ring {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes line {
+  0% {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+@keyframes para {
+  0% {
+    opacity: 0;
+    scale: 0.90;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+.h3ofhome::before,
+.h3ofhome::after {
+  place-self: center;
+  mask: var(--mask);
+  animation: text 1s ease-out var(--dt5) backwards;
+}
+.h3ofhome::before {
+  --j: 0;
+  animation-name: text, move;
+  content: attr(data-name);
+}
+.h3ofhome::after {
+  font-size: 0.6em;
+  font-weight: 100;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(50%);
+  }
+}
+@keyframes text {
+  0% {
+    mask-position: calc(var(--j) * 100%);
+  }
+}
+
+.glowingExp{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: -5%;
+  transform: rotate(180deg);
+  filter: blur(90px);
+  background: #582e9600;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+}
+.curGlowing{
+  width: 90%;  
+  height: 100%;
+  position: relative;
+  background-image: linear-gradient(180deg,#ffffff 10%,#5833aacf 30%,#2f215486 50%, #251a4296 70%,transparent);
+  clip-path: polygon(50% 0, 50% 0, 100% 100%, 0% 100%);
+}
+
+/* Glowing Button Animation */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 0 0 #7b48e9cf;
+  }
+
+  50% {
+    box-shadow: 0 0 30px 0 #7b48e9cf;
+  }
+}
+
+/* Glowing Button Styles */
+.btn-glow {
+  background: #2f2154;
+  color: #fff;
+  padding: 16px 34px;
+  box-shadow: 0 0 0 0 #2f215486;
+  animation: glow 1.4s ease-out infinite;
+}

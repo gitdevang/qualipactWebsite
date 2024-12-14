@@ -1,0 +1,159 @@
+.carContainer {
+  display: none !important;
+}
+
+.hero-slider-mobile {
+  display: block !important;
+  z-index: 30 !important;
+  width: 100% !important;
+  padding: 0px 40px !important;
+  max-width: 490px !important;
+  margin-top: 20px !important;
+}
+
+.flex-col-every-center {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-direction: column !important;
+}
+
+@media (min-width: 768px) {
+  .carContainer {
+    --cardWidth: 14rem;
+    --cardHeight: 95%;
+    --gap: 20px;
+    display: flex !important;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 37vh;
+    max-height: 20rem;
+  }
+
+  .hero-slider-mobile {
+    display: none !important;
+  }
+
+  @media (min-width: 1240px) {
+    .carContainer {
+      --cardWidth: 19rem;
+      height: 38vh;
+    }
+  }
+
+  @media (min-width: 1480px) {
+    .carContainer {
+      --cardWidth: 19rem;
+      height: 36vh;
+    }
+  }
+  @media (min-width: 1800px) {
+    .carContainer {
+      --gap: 50px;
+    }
+  }
+
+
+  .carbox-left,
+  .carbox-center,
+  .carbox-right {
+    position: absolute;
+    background-color: #0000007d;
+    backdrop-filter: blur(10px);
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    transform-origin: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(25, 124, 208, 0.3);
+    transition: all ease-in-out 0.3s;
+  }
+
+  .carbox-left:hover,
+  .carbox-center:hover,
+  .carbox-right:hover {
+    box-shadow: 0 0 20px rgba(225, 225, 225, 0.8), 0 0 40px rgba(25, 124, 208, 0.5);
+    transition: all ease-in-out 0.3s;
+  }
+
+  .carbox-left>*,
+  .carbox-center>*,
+  .carbox-right>* {
+    opacity: 0;
+    animation: fadeAnim 0.5s ease-in-out forwards;
+    animation-delay: 0.7s;
+  }
+
+  .carbox-left {
+    height: 0;
+    width: 0;
+    opacity: 0;
+    animation: scalingAnim 0.5s ease-in-out forwards, moveSquare1 0.6s ease-in-out forwards;
+    animation-delay: 0.3s, 1s;
+  }
+
+  .carbox-center {
+    height: 0;
+    width: 0;
+    opacity: 0;
+    animation: scalingAnim 0.5s ease-in-out forwards;
+    animation-delay: 0.3s;
+  }
+
+  .carbox-right {
+    height: 0;
+    width: 0;
+    opacity: 0;
+    animation: scalingAnim 0.5s ease-in-out forwards, moveSquare3 0.6s ease-in-out forwards;
+    animation-delay: 0.3s, 1s;
+  }
+
+  @keyframes scalingAnim {
+    0% {
+      height: 0;
+      width: 0;
+      opacity: 0;
+    }
+
+    100% {
+      width: var(--cardWidth);
+      height: var(--cardHeight);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeAnim {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes moveSquare1 {
+    0% {
+      left: 50%;
+    }
+
+    100% {
+      left: calc(50% - var(--cardWidth) - var(--gap));
+    }
+  }
+
+  @keyframes moveSquare3 {
+    0% {
+      left: 50%;
+    }
+
+    100% {
+      left: calc(50% + var(--cardWidth) + var(--gap));
+    }
+  }
+}

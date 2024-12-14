@@ -1,0 +1,68 @@
+.chooseCard::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 110%;
+    top: -10%;
+    filter: blur(60px);
+    background-image: radial-gradient(circle at bottom, rgba(226, 218, 243, 0.5),#7c2ae134);
+}
+.bgprocess{
+  background-image: linear-gradient(to top right, #473623, #101962, #38042f);
+}
+
+.rightSideAnim {
+  animation: rightSideAnim 0.8s ease-in-out forwards;
+}
+@keyframes rightSideAnim {
+  0% {
+    opacity: 0;
+    transform: translateX(50px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+.leftSideAnim {
+  animation: leftSideAnim 0.8s ease-in-out forwards;
+}
+@keyframes leftSideAnim {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+.topSideAnim {
+  animation: topSideAnim 0.8s ease-in-out forwards;
+}
+@keyframes topSideAnim {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.bottomSideAnim {
+  animation: bottomSideAnim 0.8s ease-in-out forwards;
+}
+@keyframes bottomSideAnim {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

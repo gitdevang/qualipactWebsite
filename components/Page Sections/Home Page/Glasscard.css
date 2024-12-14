@@ -1,0 +1,131 @@
+.GlassCard .glassBox {
+  position: relative;
+  /* width: 400px; */
+  height: 250px;
+  display: flex;
+  padding: 0px 30px;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.GlassCard .glassBox::before {
+  content: ' ';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  background: #fff;
+  border-radius: 8px;
+  transform: skewX(0deg);
+  transition: 0.5s;
+}
+
+.GlassCard .glassBox::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 8px;
+  transform: skewX(0deg);
+  transition: 0.5s;
+  filter: blur(10px);
+}
+
+.GlassCard .glassBox:hover:before,
+.GlassCard .glassBox:hover:after {
+  transform: skewX(-10deg);
+  left: 0px;
+  width: calc(100% - 10px);
+
+}
+
+.GlassCard .glassBox:before,
+.GlassCard .glassBox:after {
+  background: linear-gradient(45deg, var(--startGrad), var(--endGrad));
+}
+
+.GlassCard .glassBox span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.GlassCard .glassBox span::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-radius: 8px;
+  background: var(--endGradOpaque);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: 0.4s;
+  animation: moveAnim 2s ease-in-out infinite;
+  box-shadow: 0 5px 15px rgba(252, 231, 2, 0.105);
+}
+
+.GlassCard .glassBox:hover span::before {
+  top: -50px;
+  right: -15px;
+  width: 100px;
+  height: 100px;
+  opacity: 1;
+}
+
+.GlassCard .glassBox span::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background: var(--startGradOpaque);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: 0.4s;
+  animation: moveAnim 2s ease-in-out infinite;
+  box-shadow: 0 5px 15px rgba(252, 231, 2, 0.105);
+  animation-delay: -1s;
+}
+
+.GlassCard .glassBox:hover span:after {
+  bottom: -30px;
+  left: -15px;
+  width: 100px;
+  height: 100px;
+  opacity: 1;
+}
+
+@keyframes moveAnim {
+
+  0%,
+  100% {
+    transform: translateY(10px);
+  }
+
+  50% {
+    transform: translate(-10px);
+  }
+}
+
+.GlassCard .glassBox .content {
+  position: relative;
+  left: 0;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.155);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transform: 0.5s;
+  color: #fff;
+}
