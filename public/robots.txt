@@ -1,6 +1,18 @@
+<<<<<<< HEAD
 User-agent: *
 Allow: /
 Disallow: /privacy-policy
 Disallow: /terms-and-conditions
 
 Sitemap: https://qualipact.com/sitemap.xml
+=======
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://qualipact.in
+
+# Sitemaps
+Sitemap: https://qualipact.in/sitemap.xml
+>>>>>>> 184f0d0d7f912b6f304cc8cbe6b866011a4fc44f
