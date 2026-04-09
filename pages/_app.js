@@ -104,7 +104,6 @@ export default function App({ Component, pageProps }) {
             }`}
         >
           <ul className="flex flex-col gap-10 font-p_light text-2xl text-white">
-            {/* Staggered animation: Left to Right Slide + Fade */}
             {[
               { name: "Home", path: "/" },
               { name: "Services", path: "/services" },
@@ -114,16 +113,18 @@ export default function App({ Component, pageProps }) {
             ].map((item, index) => (
               <li
                 key={item.name}
-                className={`transform transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${menu
-                  ? "translate-x-0 opacity-100"
-                  : "-translate-x-12 opacity-0"
+                className={`transform-gpu transition-[transform,opacity] duration-500 ease-out will-change-transform ${menu
+                    ? "translate-x-0 opacity-100"
+                    : "-translate-x-8 opacity-0"
                   }`}
-                style={{ transitionDelay: `${350 + index * 80}ms` }}
+                style={{
+                  transitionDelay: menu ? `${200 + index * 75}ms` : '0ms'
+                }}
               >
                 <Link
                   href={item.path}
                   onClick={handleMenuToggle}
-                  className="hover:text-blue-500 transition-colors duration-300"
+                  className="hover:text-blue-500 transition-colors duration-300 block w-full"
                 >
                   {item.name}
                 </Link>
