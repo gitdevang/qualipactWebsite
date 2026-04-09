@@ -80,7 +80,7 @@
   position: absolute;
   width: 800px;
   height: 800px;
-  background: radial-gradient(circle, rgb(86, 98, 211), transparent);
+  background: radial-gradient(circle, rgb(147 51 234 / 0.25), transparent);
   pointer-events: none;
   mix-blend-mode: screen;
   border-radius: 50%;

@@ -14,9 +14,8 @@ import Footer from "@/components/Footer";
 export function IconComp({ Ico, idx, visible }) {
   return (
     <Ico
-      className={`w-5 h-5 sm:w-6 sm:h-6 scale-90 opacity-0 ${
-        visible ? `contact-scale${idx + 1}` : ""
-      }`}
+      className={`w-5 h-5 sm:w-6 sm:h-6 scale-90 opacity-0 ${visible ? `contact-scale${idx + 1}` : ""
+        }`}
     />
   );
 }
@@ -38,7 +37,7 @@ function Contact() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const {statusMessage, setStatusMessage} = useTheme();
+  const { statusMessage, setStatusMessage } = useTheme();
 
   // Handle form submission
   const onSubmit = async (data) => {
@@ -89,12 +88,11 @@ function Contact() {
 
   return (<>
     <Head>
-        <title>Contact - Qualipact</title>
-        <meta
-          name="description"
-          content="Qualipact is a leading web and app development company offering custom web apps, mobile solutions, AI integration, and digital transformation. We empower businesses to drive growth through innovative designs, automation, and tailored technology solutions."
-        />
-      </Head>
+      <title>Contact Qualipact | Start Engineering Your B2B Platform</title>
+      <meta name="description" content="Ready to scale your digital infrastructure? Get in touch with Qualipact to discuss headless architectures, custom B2B solutions, and your next enterprise project." />
+      <meta name="keywords" content="Contact Qualipact, hire web engineers, B2B software consultation, custom infrastructure planning" />
+      <link rel="canonical" href="https://qualipact.com/contact" />
+    </Head>
     {/* Sidebar */}
     <div className="w-full h-full bg-black">
       {/* <!-- Fullscreen Video Background --> */}
@@ -143,31 +141,28 @@ function Contact() {
                     <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
                       {idx !== 2 && (
                         <div
-                          className={`${
-                            idx === 0
+                          className={`${idx === 0
                               ? "bg-gradient-to-b from-yellow-500 to-orange-500"
                               : "bg-gradient-to-b from-orange-500 from-60% to-red-500"
-                          } w-1 h-full scale-y-0 absolute top-0 pointer-events-none`}
-                          id={`${
-                            visibile[0]
+                            } w-1 h-full scale-y-0 absolute top-0 pointer-events-none`}
+                          id={`${visibile[0]
                               ? idx === 0
                                 ? "divgray1"
                                 : "divgray2"
                               : ""
-                          }`}
+                            }`}
                         ></div>
                       )}
                     </div>
                     <div
-                      className={`flex-shrink-0 w-10 h-10 rounded-full ${
-                        visibile[0]
+                      className={`flex-shrink-0 w-10 h-10 rounded-full ${visibile[0]
                           ? idx === 0
                             ? "bg-yellow-500 contact-fade1"
                             : idx === 1
-                            ? "bg-orange-500 contact-fade2"
-                            : "bg-red-500 contact-fade3"
+                              ? "bg-orange-500 contact-fade2"
+                              : "bg-red-500 contact-fade3"
                           : ""
-                      } inline-flex items-center justify-center opacity-0 text-white relative z-10`}
+                        } inline-flex items-center justify-center opacity-0 text-white relative z-10`}
                     >
                       <IconComp
                         Ico={data.icon}
@@ -176,20 +171,18 @@ function Contact() {
                       />
                     </div>
                     <div
-                      className={`flex-grow pl-4 relative ${
-                        visibile[0] ? `contact-right${idx + 1}` : ""
-                      } opacity-0`}
+                      className={`flex-grow pl-4 relative ${visibile[0] ? `contact-right${idx + 1}` : ""
+                        } opacity-0`}
                     >
                       <h2
-                        className={`text-lg sm:text-xl font-p_sbold ${
-                          visibile[0]
+                        className={`text-lg sm:text-xl font-p_sbold ${visibile[0]
                             ? idx === 0
                               ? "text-yellow-500"
                               : idx === 1
-                              ? "text-orange-500"
-                              : "text-red-500"
+                                ? "text-orange-500"
+                                : "text-red-500"
                             : ""
-                        } tracking-wide`}
+                          } tracking-wide`}
                       >
                         {data.title}
                       </h2>
@@ -210,11 +203,10 @@ function Contact() {
       <div className="w-full lg:w-[40%] overflow-auto py-8 lg:m-5 xl:m-10 rounded-lg px-3 sm:px-7 bg-[#ffffff] shadow-xl">
         {statusMessage.length > 0 ? (
           <h1
-            className={`${
-              statusMessage.includes("Error")
+            className={`${statusMessage.includes("Error")
                 ? "text-red-500"
                 : "text-green-500"
-            } text-4xl font-p_bold text-center`}
+              } text-4xl font-p_bold text-center`}
           >
             {statusMessage}
           </h1>
@@ -254,9 +246,8 @@ function Contact() {
                           type="text"
                           aria-label="First Name"
                           id="name"
-                          className={`mt-1 font-p_regular text-sm block w-full px-4 py-2 border border-gray-300 rounded-md bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-                            errors.name ? "border-red-500" : ""
-                          }`}
+                          className={`mt-1 font-p_regular text-sm block w-full px-4 py-2 border border-gray-300 rounded-md bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 ${errors.name ? "border-red-500" : ""
+                            }`}
                         />
                       )}
                     />
@@ -315,9 +306,8 @@ function Contact() {
                           type="email"
                           id="email"
                           aria-label="Email Address"
-                          className={`mt-1 font-p_regular text-sm block w-full px-4 py-2 border border-gray-300 bg-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-                            errors.email ? "border-red-500" : ""
-                          }`}
+                          className={`mt-1 font-p_regular text-sm block w-full px-4 py-2 border border-gray-300 bg-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${errors.email ? "border-red-500" : ""
+                            }`}
                         />
                       )}
                     />
@@ -409,9 +399,8 @@ function Contact() {
                           <select
                             {...field}
                             aria-label="Select Service"
-                            className={`mt-1 font-p_regular text-sm block w-full px-4 py-2 border border-gray-300 bg-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-                              errors.email ? "border-red-500" : ""
-                            }`}
+                            className={`mt-1 font-p_regular text-sm block w-full px-4 py-2 border border-gray-300 bg-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${errors.email ? "border-red-500" : ""
+                              }`}
                           >
                             {/* Default "Please Select" option */}
                             <option
@@ -504,7 +493,7 @@ function Contact() {
         )}
       </div>
     </div>
-    <Footer/>
+    <Footer />
   </>);
 }
 

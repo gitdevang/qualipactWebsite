@@ -15,11 +15,10 @@ function App() {
   return (
     <>
       <Head>
-        <title>Qualipact - Web and App Development Company</title>
-        <meta
-          name="description"
-          content="Qualipact is a leading web and app development company offering custom web apps, mobile solutions, AI integration, and digital transformation. We empower businesses to drive growth through innovative designs, automation, and tailored technology solutions."
-        />
+        <title>Qualipact | AI-Integrated Digital Infrastructure & Apps</title>
+        <meta name="description" content="Qualipact engineers scalable digital infrastructure, headless web architectures, and cross-platform mobile apps. We integrate AI and smart systems to accelerate enterprise growth." />
+        <meta name="keywords" content="Qualipact, AI-integrated systems, cross-platform mobile apps, headless architecture, B2B software engineering, smart enterprise solutions" />
+        <link rel="canonical" href="https://qualipact.com" />
       </Head>
       <MainpageHome />
       <ChooseUSHome />
@@ -28,7 +27,7 @@ function App() {
       <DevProcessHome />
       <StackHome />
       <FormMain />
-      <Footer/>
+      <Footer />
     </>
   );
 }

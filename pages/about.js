@@ -101,11 +101,10 @@ function About() {
   return (
     <>
       <Head>
-        <title>About - Qualipact</title>
-        <meta
-          name="description"
-          content="Qualipact delivers expert web and app development, AI solutions, and custom technology integrations, driven by an agile, client-focused approach that fosters innovation and accelerates business growth."
-        />
+        <title>About Qualipact | High-Velocity Digital Engineering Studio</title>
+        <meta name="description" content="Qualipact is a modern engineering studio dedicated to building resilient digital assets. Learn about our tech stack, mission, and commitment to technical sovereignty." />
+        <meta name="keywords" content="About Qualipact, engineering studio, web development agency, B2B tech team, custom software architects" />
+        <link rel="canonical" href="https://qualipact.com/about" />
       </Head>
       <div className="w-full flex flex-col justify-center py-20 bg-[#e2e2e2] z-20 relative">
         {/* Content Section */}
@@ -258,7 +257,7 @@ function About() {
           </div>
         </div>
       </section>
-      <Footer/>
+      <Footer />
     </>
   );
 }

@@ -14,7 +14,7 @@ function Footer() {
         <div className="max-w-screen-2xl mx-auto text-xs 2xl:text-sm font-p_regular px-10">
           <div className="flex flex-col lg:flex-row md:justify-between gap-3 items-center">
             <h1 className="font-p_md text-gray-700">
-              &copy; 2024 Qualipact. All Rights Reserved.
+              &copy; {new Date().getFullYear()} Qualipact. All Rights Reserved.
             </h1>
             <div className="flex sm:flex-row flex-col gap-3 sm:gap-5">
               <div className="flex gap-5">
@@ -26,6 +26,11 @@ function Footer() {
                 <h1>
                   <Link href="/services" className="text-[#197cd0]">
                     Services
+                  </Link>
+                </h1>
+                <h1>
+                  <Link href="/case-study" className="text-[#197cd0]">
+                    Case Study
                   </Link>
                 </h1>
                 <h1>
