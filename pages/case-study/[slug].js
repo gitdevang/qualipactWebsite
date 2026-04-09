@@ -221,6 +221,7 @@ export default function SchoolManagementCaseStudy() {
                   src={caseStudyData.projectOverview.image}
                   alt="EduCore Dashboard and Mobile View"
                   fill
+                  priority
                   className="object-contain transition-transform duration-700 group-hover:scale-[1.02]"
                 />
               </div>
@@ -437,6 +438,7 @@ export default function SchoolManagementCaseStudy() {
                     src={tech.logoPath}
                     alt={tech.name}
                     fill
+                    priority
                     className="object-contain p-4"
                   />
                 </div>

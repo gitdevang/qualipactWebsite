@@ -71,13 +71,13 @@ function MainpageHome() {
         modules={[EffectCards, Pagination, Autoplay]}
         pagination={{ type: "bullets", clickable: true }}
         spaceBetween={20}
-        loop={true}
+        loop={false}
         autoplay={{
           delay: 1500,
           disableOnInteraction: false,
         }}
         effect="cards"
-        slidesPerView={"auto"}
+        slidesPerView={"1"}
         className="hero-slider-mobile"
       >
         {/* Swiper Slide 1 */}

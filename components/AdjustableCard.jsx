@@ -26,6 +26,7 @@ function AdjustableCard({
                 alt={heading} // Alt text for accessibility
                 width={54} // Set a fixed width (16 * 4 for responsiveness)
                 height={54} // Set a fixed height (16 * 4 for responsiveness)
+                priority
                 className="object-contain" // Maintain aspect ratio
               />
             ) : (

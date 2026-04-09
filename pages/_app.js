@@ -64,6 +64,7 @@ export default function App({ Component, pageProps }) {
             height={58}
             className={`transition-opacity ${menu ? "opacity-0" : "opacity-100"
               }`}
+            priority
             style={{
               maxWidth: "100%",
               height: "auto"
@@ -114,8 +115,8 @@ export default function App({ Component, pageProps }) {
               <li
                 key={item.name}
                 className={`transform transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${menu
-                    ? "translate-x-0 opacity-100"
-                    : "-translate-x-12 opacity-0"
+                  ? "translate-x-0 opacity-100"
+                  : "-translate-x-12 opacity-0"
                   }`}
                 style={{ transitionDelay: `${350 + index * 80}ms` }}
               >
