@@ -91,7 +91,7 @@ function Contact() {
       <title>Contact Qualipact | Start Engineering Your B2B Platform</title>
       <meta name="description" content="Ready to scale your digital infrastructure? Get in touch with Qualipact to discuss headless architectures, custom B2B solutions, and your next enterprise project." />
       <meta name="keywords" content="Contact Qualipact, hire web engineers, B2B software consultation, custom infrastructure planning" />
-      <link rel="canonical" href="https://qualipact.com/contact" />
+      <link rel="canonical" href="https://www.qualipact.com/contact" />
     </Head>
     {/* Sidebar */}
     <div className="w-full h-full bg-black">

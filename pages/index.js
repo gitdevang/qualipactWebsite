@@ -18,7 +18,7 @@ function App() {
         <title>Qualipact | AI-Integrated Digital Infrastructure & Apps</title>
         <meta name="description" content="Qualipact engineers scalable digital infrastructure, headless web architectures, and cross-platform mobile apps. We integrate AI and smart systems to accelerate enterprise growth." />
         <meta name="keywords" content="Qualipact, AI-integrated systems, cross-platform mobile apps, headless architecture, B2B software engineering, smart enterprise solutions" />
-        <link rel="canonical" href="https://qualipact.com" />
+        <link rel="canonical" href="https://www.qualipact.com" />
       </Head>
       <MainpageHome />
       <ChooseUSHome />

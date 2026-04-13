@@ -11,7 +11,7 @@ export default function CaseStudy() {
         <title>Technical Case Studies & Proven Engineering Impact | Qualipact</title>
         <meta name="description" content="Explore Qualipact's technical portfolio. Deep dives into how we engineer dual-engine platforms and centralized data hubs for maximum scalability and security." />
         <meta name="keywords" content="Qualipact case studies, engineering portfolio, B2B tech examples, scalable architecture examples, headless tech stack, software impact" />
-        <link rel="canonical" href="https://qualipact.com/case-study" />
+        <link rel="canonical" href="https://www.qualipact.com/case-study" />
       </Head>
       <CaseStudyHero />
       <CaseStudyGrid />

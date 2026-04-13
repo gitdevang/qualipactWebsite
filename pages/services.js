@@ -20,7 +20,7 @@ function Services() {
       <title>Custom Web, Mobile & AI Solutions | Qualipact</title>
       <meta name="description" content="Discover Qualipact's engineering services. From high-velocity headless platforms to React Native mobile ecosystems and AI-driven smart systems for modern businesses." />
       <meta name="keywords" content="Qualipact services, React Native app development, AI software integration, headless CMS, custom B2B portals, enterprise mobility" />
-      <link rel="canonical" href="https://qualipact.com/services" />
+      <link rel="canonical" href="https://www.qualipact.com/services" />
     </Head>
     <div className="w-full h-[75vh] service-hero-section lg:h-screen overflow-hidden flex flex-col items-center relative radial-bg z-[-2]">
       {/* Animated text section */}
